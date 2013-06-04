@@ -5,7 +5,5 @@ class HashieTest < TestCase
   end
 
   def test_first_test
-    p 'sdsds'
-    assert_equal true, true
   end
 end
