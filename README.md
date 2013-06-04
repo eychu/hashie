@@ -1,4 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/eychu/hashie/badge.png)](https://coveralls.io/r/eychu/hashie)
+[![Build Status](https://travis-ci.org/eychu/hashie.png)](https://travis-ci.org/eychu/hashie)
 ## Contributing
 
 1. Fork it
