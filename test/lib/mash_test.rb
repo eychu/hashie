@@ -4,7 +4,7 @@ class MashTest < TestCase
 
   def setup
     @mash = Hashie::Mash.new
-    @mash.name = "Pete"
+    @mash.name = 'Pete'
   end
 
   def test_should_return_nil
@@ -13,9 +13,12 @@ class MashTest < TestCase
 
   def test_should_return_name?
     assert_equal true, @mash.name?
+    assert_equal false, @mash.namewww?
   end
 
   def test_should_return_name
-    assert_equal "Pete", @mash.name
+    #p @mash.methods[:name].inspect
+    #raise @mash.name.inspect
+    assert_equal 'Pete', @mash.name
   end
 end
