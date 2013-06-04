@@ -4,9 +4,8 @@ require 'minitest/autorun'
 
 require 'coveralls'
 Coveralls.wear!('rails')
-
+Dir[File.expand_path('../fixtures/**/*.rb', __FILE__)].each { |f| require f }
 class TestCase < MiniTest::Test
-  def load_fixture(filename)
-    File.read(File.dirname(__FILE__) + "/fixtures/#{filename}")
-  end
+
+
 end

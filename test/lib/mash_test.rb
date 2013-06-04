@@ -17,8 +17,6 @@ class MashTest < TestCase
   end
 
   def test_should_return_name
-    #p @mash.methods[:name].inspect
-    #raise @mash.name.inspect
     assert_equal 'Pete', @mash.name
   end
 end

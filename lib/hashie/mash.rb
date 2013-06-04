@@ -15,7 +15,7 @@ module Hashie
         when '='
           return @methods[name.chop] = args[0]
         when '?'
-          return @methods[name.chop].nil? ? false : true
+          return !@methods[name.chop].nil?
       end
 
       if name == "name"
