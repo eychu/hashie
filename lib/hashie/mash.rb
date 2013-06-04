@@ -18,8 +18,11 @@ module Hashie
           return !@methods[name.chop].nil?
       end
 
-      if name == "name"
+      if @methods[name]
+        define_singleton_method name.to_sym do
           @methods[name]
+        end
+        send name
       end
 
     end

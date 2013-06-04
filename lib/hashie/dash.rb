@@ -2,24 +2,49 @@ module Hashie
 
   class Dash < Hash
 
-    def initialize(*args)
-      @methods = {}
-      @properties = Hash[*args]
-      #p @properties
+    def initialize(hash = {})
+      @properties = hash
+
+      self.class.requires.each do |k, v|
+        unless @properties[k]
+          raise ArgumentError
+        end
+      end
+
+      self.class.defaults.each do |k, v|
+        unless @properties[k]
+          @properties[k] = v
+        end
+      end
+
     end
 
-    def respond_to_missing?()
-      true
+    def self.requires
+      @requires
+    end
+
+    def self.defaults
+      @defaults
     end
 
     def self.property(name, options = {})
-      p options
-      p name
+
+      if options[:required]
+        @requires ||= {}
+        @requires[name] = true
+      end
+
+      if options[:default]
+        @defaults ||= {}
+        @defaults[name] = options[:default]
+      end
+
       define_method name do
         @properties[name]
       end
-      define_method "#{name}=" do
 
+      define_method "#{name}=" do |value|
+        @properties[name] = value
       end
     end
 
