@@ -27,7 +27,13 @@ module Hashie
       @defaults
     end
 
+    def [] (args)
+      @properties[args]
+    end
+
     def self.property(name, options = {})
+      p name
+      p options
 
       if options[:required]
         @requires ||= {}
@@ -46,6 +52,8 @@ module Hashie
       define_method "#{name}=" do |value|
         @properties[name] = value
       end
+
+
     end
 
 

@@ -11,6 +11,7 @@ class DashTest < TestCase
   end
 
   def test_should_put_name
+
     @person.name = 'Mark'
     assert_equal 'Mark', @person.name
   end
@@ -23,6 +24,10 @@ class DashTest < TestCase
 
   def test_should_return_default
     assert_equal 'Rubyist', @person.occupation
+  end
+
+  def test_should_return_name
+    assert_equal 'Rubyist', @person[:occupation]
   end
 
 end
