@@ -23,7 +23,6 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
-    tconsole (1.0.0)
     thor (0.18.1)
 
 PLATFORMS
@@ -34,4 +33,3 @@ DEPENDENCIES
   hashie!
   minitest (~> 5.0.3)
   rake
-  tconsole
