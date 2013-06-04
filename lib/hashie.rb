@@ -1,4 +1,4 @@
-require "hashie/version"
+require 'hashie/version'
 
 module Hashie
   # Your code goes here...

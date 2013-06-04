@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Hashie::VERSION
   spec.authors       = ["Alexey Chuvashov"]
   spec.email         = ["alexeychu@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{clone of hashie}
+  spec.summary       = %q{clone of hashie}
   spec.homepage      = ""
   spec.license       = "MIT"
 
